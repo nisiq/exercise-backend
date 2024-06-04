@@ -10,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/instrutor")
 public class InstrutorController {
@@ -21,8 +19,8 @@ public class InstrutorController {
     private InstrutorRepository instrutorRepository;
 
     @PostMapping
-    public void cadastrar(@RequestBody @Valid DadosCadastro dadosCadastro){
-        instrutorRepository.save(new Instrutor(dadosCadastro));
+    public void cadastrar(@RequestBody @Valid InstructorRegistrationData instructorRegistrationData){
+        instrutorRepository.save(new Instrutor(instructorRegistrationData));
     }
 
     @GetMapping

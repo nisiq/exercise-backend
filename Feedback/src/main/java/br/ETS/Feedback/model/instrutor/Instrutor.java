@@ -1,11 +1,8 @@
 package br.ETS.Feedback.model.instrutor;
 
-import br.ETS.Feedback.model.informacoes.DadosInformacoes;
-import br.ETS.Feedback.model.informacoes.Informacoes;
+import br.ETS.Feedback.model.informacoes.InstructorInformation;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -27,18 +24,18 @@ public class Instrutor {
     private Curso curso;
 
     @Embedded
-    private Informacoes informacoes;
+    private InstructorInformation instructorInformation;
 
     private boolean ferias;
     private boolean ativo;
 
-    public Instrutor(DadosCadastro dadosCadastro) {
-        this.nome = dadosCadastro.nome();
-        this.email = dadosCadastro.email();
-        this.edv = dadosCadastro.edv();
-        this.curso = dadosCadastro.curso();
-        this.informacoes = new Informacoes(dadosCadastro.informacoes());
-        this.ferias = dadosCadastro.ferias();
+    public Instrutor(InstructorRegistrationData instructorRegistrationData) {
+        this.nome = instructorRegistrationData.nome();
+        this.email = instructorRegistrationData.email();
+        this.edv = instructorRegistrationData.edv();
+        this.curso = instructorRegistrationData.curso();
+        this.instructorInformation = new InstructorInformation(instructorRegistrationData.informacoes());
+        this.ferias = instructorRegistrationData.ferias();
         this.ativo = true;
     }
 
@@ -59,7 +56,7 @@ public class Instrutor {
             this.ferias = dadosAtualizacaoInstrutor.ferias();
         }
         if (dadosAtualizacaoInstrutor.informacoes() != null){
-            this.informacoes.atualizar(dadosAtualizacaoInstrutor.informacoes());
+            this.instructorInformation.atualizar(dadosAtualizacaoInstrutor.informacoes());
         }
 
     }
@@ -67,9 +64,6 @@ public class Instrutor {
     public void excluir(){
         this.ativo = false;
     }
-
-
-
 
 
 }

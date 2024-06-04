@@ -1,7 +1,6 @@
 package br.ETS.Feedback.model.instrutor;
 
-import br.ETS.Feedback.model.informacoes.DadosInformacoes;
-import br.ETS.Feedback.model.informacoes.Informacoes;
+import br.ETS.Feedback.model.informacoes.InstructorInformation;
 
 public record DadosListagemInstrutor(
         String nome,
@@ -9,7 +8,7 @@ public record DadosListagemInstrutor(
         String edv,
         Boolean ferias,
         Curso curso,
-        Informacoes informacoes
+        InstructorInformation instructorInformation
 ) {
 
     public DadosListagemInstrutor(Instrutor instrutor) {
@@ -18,7 +17,7 @@ public record DadosListagemInstrutor(
                 instrutor.getEdv(),
                 instrutor.isFerias(),
                 instrutor.getCurso(),
-                instrutor.getInformacoes()
+                instrutor.getInstructorInformation()
                 );
     }
 }

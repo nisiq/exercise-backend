@@ -1,7 +1,6 @@
 package br.ETS.Feedback.model.instrutor;
 
-import br.ETS.Feedback.model.informacoes.DadosInformacoes;
-import br.ETS.Feedback.model.informacoes.Informacoes;
+import br.ETS.Feedback.model.informacoes.InstructorDataInformation;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoInstrutor(
@@ -11,5 +10,5 @@ public record DadosAtualizacaoInstrutor(
         String edv,
         Curso curso,
         Boolean ferias,
-        DadosInformacoes informacoes) {
+        InstructorDataInformation informacoes) {
 }

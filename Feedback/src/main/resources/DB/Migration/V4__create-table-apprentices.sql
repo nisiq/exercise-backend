@@ -1,0 +1,10 @@
+create table tbapprentices (id integer not null auto_increment,
+nome varchar(255),
+email varchar(255),
+edv varchar(255),
+curso varchar (255),
+vacation bool not null,
+active bool not null,
+classroom varchar(255),
+shift varchar(255),
+primary key (id));
