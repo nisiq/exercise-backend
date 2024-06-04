@@ -1,0 +1,1 @@
+alter table tbinstrutores add column ferias bool not null;
