@@ -1,6 +1,10 @@
 package br.ETS.Feedback.model.informacoes;
 
+import br.ETS.Feedback.model.apprentice.Shift;
+import br.ETS.Feedback.model.instrutor.Curso;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +19,9 @@ import lombok.Setter;
 @Embeddable
 public class ApprenticeInformation {
     private String classroom;
-    private String shift;
+
+    @Enumerated(EnumType.STRING)
+    private Shift shift;
 
     public ApprenticeInformation(ApprenticeDataInformation apprenticeDataInformation){
         this.classroom = apprenticeDataInformation.classroom();
