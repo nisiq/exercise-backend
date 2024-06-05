@@ -2,7 +2,7 @@ package br.ETS.Feedback.model.instrutor;
 
 import br.ETS.Feedback.model.informacoes.InstructorInformation;
 
-public record DadosListagemInstrutor(
+public record InstructorDataListing(
         String nome,
         String email,
         String edv,
@@ -11,7 +11,7 @@ public record DadosListagemInstrutor(
         InstructorInformation instructorInformation
 ) {
 
-    public DadosListagemInstrutor(Instrutor instrutor) {
+    public InstructorDataListing(Instrutor instrutor) {
         this(instrutor.getNome(),
                 instrutor.getEmail(),
                 instrutor.getEdv(),

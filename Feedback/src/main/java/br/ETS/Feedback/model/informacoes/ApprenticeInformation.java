@@ -22,4 +22,9 @@ public class ApprenticeInformation {
         this.shift = apprenticeDataInformation.shift();
     }
 
+    public void apprenticeUpdate(ApprenticeDataInformation apprenticeDataInformation){
+        this.classroom = apprenticeDataInformation.classroom() != null ? apprenticeDataInformation.classroom() : this.classroom;
+        this.shift = apprenticeDataInformation.shift() != null ? apprenticeDataInformation.shift() : this.shift;
+    }
+
 }

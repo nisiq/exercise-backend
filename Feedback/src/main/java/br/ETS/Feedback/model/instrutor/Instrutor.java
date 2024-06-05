@@ -39,24 +39,24 @@ public class Instrutor {
         this.ativo = true;
     }
 
-    public void atualizar(DadosAtualizacaoInstrutor dadosAtualizacaoInstrutor){
-        if (dadosAtualizacaoInstrutor.nome() != null){
-            this.nome = dadosAtualizacaoInstrutor.nome();
+    public void atualizar(InstructorUpdateData instructorUpdateData){
+        if (instructorUpdateData.nome() != null){
+            this.nome = instructorUpdateData.nome();
         }
-        if (dadosAtualizacaoInstrutor.email() != null){
-            this.email = dadosAtualizacaoInstrutor.email();
+        if (instructorUpdateData.email() != null){
+            this.email = instructorUpdateData.email();
         }
-        if (dadosAtualizacaoInstrutor.edv() != null){
-            this.edv = dadosAtualizacaoInstrutor.edv();
+        if (instructorUpdateData.edv() != null){
+            this.edv = instructorUpdateData.edv();
         }
-        if (dadosAtualizacaoInstrutor.curso() != null){
-            this.curso = dadosAtualizacaoInstrutor.curso();
+        if (instructorUpdateData.curso() != null){
+            this.curso = instructorUpdateData.curso();
         }
-        if (dadosAtualizacaoInstrutor.ferias() != null){
-            this.ferias = dadosAtualizacaoInstrutor.ferias();
+        if (instructorUpdateData.ferias() != null){
+            this.ferias = instructorUpdateData.ferias();
         }
-        if (dadosAtualizacaoInstrutor.informacoes() != null){
-            this.instructorInformation.atualizar(dadosAtualizacaoInstrutor.informacoes());
+        if (instructorUpdateData.informacoes() != null){
+            this.instructorInformation.atualizar(instructorUpdateData.informacoes());
         }
 
     }
