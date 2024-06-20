@@ -1,8 +1,10 @@
 package br.ETS.Feedback.model.apprentice;
 
 
+import br.ETS.Feedback.model.apprentice.dto.ApprenticeRegistrationData;
+import br.ETS.Feedback.model.apprentice.dto.ApprenticeUpdateData;
 import br.ETS.Feedback.model.informacoes.ApprenticeInformation;
-import br.ETS.Feedback.model.instrutor.Curso;
+import br.ETS.Feedback.model.Curso;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,7 +20,6 @@ Lombok | Annotation
  @@AllArgsConstructor - generate a constructor of inicializer all campos of classe
  @@NoArgsConstructor - generate a constructor null parameters - constructor null
  @@EqualsAndHashCode - generate methods 'equal' e 'hashcode'
-
  */
 @Getter
 @Setter
@@ -28,9 +29,9 @@ Lombok | Annotation
 
 
 /**
-    used in the JPA context (Java Persistence API) to map table class in a database
-    @@Entity - define a class in a JPA entity that must be mapped to a table in the database
-    @@Table - details about the table (name, diagrams, indexes)
+ used in the JPA context (Java Persistence API) to map table class in a database
+ @@Entity - define a class in a JPA entity that must be mapped to a table in the database
+ @@Table - details about the table (name, diagrams, indexes)
  */
 @Entity(name = "Apprentices")
 @Table(name = "tbapprentices")

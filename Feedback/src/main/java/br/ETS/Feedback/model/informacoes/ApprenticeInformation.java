@@ -1,7 +1,6 @@
 package br.ETS.Feedback.model.informacoes;
 
 import br.ETS.Feedback.model.apprentice.Shift;
-import br.ETS.Feedback.model.instrutor.Curso;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

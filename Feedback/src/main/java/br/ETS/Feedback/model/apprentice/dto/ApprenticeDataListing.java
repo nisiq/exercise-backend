@@ -1,7 +1,8 @@
-package br.ETS.Feedback.model.apprentice;
+package br.ETS.Feedback.model.apprentice.dto;
 
+import br.ETS.Feedback.model.apprentice.Apprentice;
 import br.ETS.Feedback.model.informacoes.ApprenticeInformation;
-import br.ETS.Feedback.model.instrutor.Curso;
+import br.ETS.Feedback.model.Curso;
 
 public record ApprenticeDataListing(
         String nome,

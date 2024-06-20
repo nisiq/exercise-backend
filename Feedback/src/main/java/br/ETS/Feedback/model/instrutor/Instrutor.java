@@ -1,6 +1,9 @@
 package br.ETS.Feedback.model.instrutor;
 
+import br.ETS.Feedback.model.Curso;
 import br.ETS.Feedback.model.informacoes.InstructorInformation;
+import br.ETS.Feedback.model.instrutor.dto.InstructorRegistrationData;
+import br.ETS.Feedback.model.instrutor.dto.InstructorUpdateData;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,7 +1,7 @@
-package br.ETS.Feedback.model.apprentice;
+package br.ETS.Feedback.model.apprentice.dto;
 
 import br.ETS.Feedback.model.informacoes.ApprenticeDataInformation;
-import br.ETS.Feedback.model.instrutor.Curso;
+import br.ETS.Feedback.model.Curso;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

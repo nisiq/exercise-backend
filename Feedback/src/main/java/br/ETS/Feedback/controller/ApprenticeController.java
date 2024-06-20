@@ -2,7 +2,9 @@ package br.ETS.Feedback.controller;
 
 
 import br.ETS.Feedback.model.apprentice.*;
-import jakarta.persistence.Table;
+import br.ETS.Feedback.model.apprentice.dto.ApprenticeDataListing;
+import br.ETS.Feedback.model.apprentice.dto.ApprenticeRegistrationData;
+import br.ETS.Feedback.model.apprentice.dto.ApprenticeUpdateData;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
