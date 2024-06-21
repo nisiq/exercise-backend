@@ -5,6 +5,7 @@ import br.ETS.Feedback.model.apprentice.*;
 import br.ETS.Feedback.model.apprentice.dto.ApprenticeDataListing;
 import br.ETS.Feedback.model.apprentice.dto.ApprenticeRegistrationData;
 import br.ETS.Feedback.model.apprentice.dto.ApprenticeUpdateData;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/apprentice")
+@SecurityRequirement(name = "bearer-key") //swagger
 public class ApprenticeController {
 
     // Start interface

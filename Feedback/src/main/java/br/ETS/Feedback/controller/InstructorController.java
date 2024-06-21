@@ -4,6 +4,7 @@ import br.ETS.Feedback.model.instrutor.*;
 import br.ETS.Feedback.model.instrutor.dto.InstructorDataListing;
 import br.ETS.Feedback.model.instrutor.dto.InstructorRegistrationData;
 import br.ETS.Feedback.model.instrutor.dto.InstructorUpdateData;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/instrutor")
+@SecurityRequirement(name = "bearer-key") //swagger
 public class InstructorController {
 
     @Autowired

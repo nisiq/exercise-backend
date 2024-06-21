@@ -1,4 +1,4 @@
-package br.ETS.Feedback.infra;
+package br.ETS.Feedback.infra.tratadordeerros;
 
 import org.hibernate.query.sqm.EntityTypeException;
 import org.springframework.http.ResponseEntity;
@@ -21,4 +21,11 @@ public class TratadorDeErros {
 //                errors.stream().map
 //        )
 //    }
+
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity tratarRegraDaAplicacao(RuntimeException e){
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
 }
